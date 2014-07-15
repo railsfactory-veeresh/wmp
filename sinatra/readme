@@ -1,0 +1,8 @@
+gem install sinatra
+
+
+
+
+running the app
+
+ruby app.rb
