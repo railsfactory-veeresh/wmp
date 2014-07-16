@@ -20,14 +20,28 @@ if day.to_i != 0 && month.to_i !=0 && year.to_i !=0
       a = f.strftime('%A')
    end
 
+v=a.to_s
+if v == "Monday"
+v="somavara"
+elsif v== "Tuesday"
+v="mangalvara"
+elsif v=="Wednesday"
+v="budhvara"
+elsif v=="Thursday"
+v="guruvara"
+elsif v=="Friday"
+v="shukravara"
+elsif v=="Saturday" 
+v="shanivara"
+elsif v == "Sunday"
+v="ravivara"
+end
 
 
-
-
- page = page + "<h3>" + day1.to_s + ("\s") + month.to_s  + ("\s") + year1.to_s + ("\n") + "<h3>"
- page = page + num.to_s + ("\s") + month.to_s  + ("\s") + year1
-   page= page + "<h3>" + a.to_s
-
+ page = page + "<h3>" + 'date in Roman =>' + day1.to_s + ("\s") + month.to_s  + ("\s") + year1.to_s + ("\n") + "<h3>" + ("\n")
+ page = page + 'date in number=>' + num.to_s + ("\s") + month.to_s  + ("\s") + year1 + ("\n") + "<h3>"
+ page= page + 'the day is =>' + ("\s") +   a.to_s + ("\n") + "<h3>"
+ page= page + 'name of day in kannada =>' + ("\s") +  v.to_s 
  end
 
 
