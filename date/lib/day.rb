@@ -1,24 +1,19 @@
+class Which_day
+ def days(day,month,year)
+         day = day.to_i
+         month = month.to_i
+         year = year.to_i
+      
+        da1 = day % 7
+        mon = month *30
+        mon1 = mon % 7
+        yea1 = year % 400
+        l = da1+mon1+yea1 
+        l = l % 7
+    hash = { 1=>'monday',2=>'tuesday',3=>'wednesday',4=>'thrusday',5=>'friday',5=>'saturday',0=>'sunday'}
+     return hash[l]
+ end
 
+end
 
-sunday=0 
-monday=1 
-tuesday=2
-wednesday=3 
-thursday=4 
-friday=5  
-saturday=6
-
-
-
-january = 0
-february = 3
-march = 3
-april = 6
-may = 1
-june = 4
-july = 6
-august = 2
-september = 5
-october = 0
-november = 3
-december = 5
+ 
