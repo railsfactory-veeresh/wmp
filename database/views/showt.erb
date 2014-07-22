@@ -1,0 +1,16 @@
+<h2> Content of the  <%=@t %> table  </h2>
+<ol>
+<% @res.each do |s| %>
+
+<li> <%=s %> </li>
+
+<% end %>
+</ol>
+<br/>
+
+<h4>Choose the operations to be performed</h4>
+<ul>
+<li><a href="/insert_content">INSERT</a></li><br>
+<li><a href="/modify_content">MODIFY</a></li><br>
+<li><a href="/delete_content">DELETE</a></li><br>
+</ul>

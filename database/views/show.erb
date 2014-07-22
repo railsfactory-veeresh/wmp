@@ -1,19 +1,12 @@
-<h2>the present database are</h2>
-<form >
- <ol> 
-   
-   <% @v.each do |i| %>
-    
-   <a href=<li> <%=i %> </li></a> </br>
-  
-   <% end %>
-</ol>
-</form
-<h2>use the database name to view tables </h2>
+<h2>these are the list of databases</h2>
+<p>select the database to see the description</p>
+<ol>
+<% @a.each do |p| %>
 
- <form action="/show_tables">
-<input type="text" name="item">
-<input type="submit" value="sumbit">
-</form> 
-   
-  
+<li><a href="/action1?db_name=<%=p.values.first %>"> <%=p.values.first %> </a></li>
+
+<% end %>
+</ol>
+<br/>
+<strong>if u want to create a new database then click here </strong>
+<a href ='create_database'>create database</a>

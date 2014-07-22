@@ -1,10 +1,7 @@
-<html>
-<head>
-<title>data base information</title>
-</head>
-<body>
-<strong><a href ='/database'>database level</a></strong> </br></br></br>
-<strong><a href='/modify'>database manipulation</a></strong> </br></br></br>
-<strong><a href='/control'>database control</a></strong> </br></br></br>
-</body>
-</html>
+
+	<h1>WELCOME TO TODO TASK </h1>
+	<% if session[:username]%>
+	<h2>Click on todo menu to perform todo actions </h2>
+	<%else %>
+	<h2>Please login to start todo application</h2>
+   <%end %>
