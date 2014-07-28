@@ -47,6 +47,7 @@ end
 
 get '/create_database' do
     @c=params[:name]
-    #client.query("create database #{@c}")
+    client.query("create database #{@c}")
     erb :create
 end
+
