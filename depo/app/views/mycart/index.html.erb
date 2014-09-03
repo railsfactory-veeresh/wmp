@@ -1,0 +1,6 @@
+
+<h1>your products are</h1>
+
+<% @mycart.each do |item| %><br/>
+<%=item.product.title%>=> <%=number_to_currency(item.product.price) %>
+<%end%>
