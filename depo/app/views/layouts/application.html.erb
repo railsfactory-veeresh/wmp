@@ -24,11 +24,10 @@
 </div>
 
 <ul>
-<li><a href="http://www.google.com">Search</a></li>
 <li><a href="/">Home</a></li>
 <li><%=link_to 'history',mycart_index_path%></li>
 <li><%=link_to 'edit profile',edit_user_registration_path%></li>
-
+<li><%=link_to 'my cart',mycart_list_path%></li>
 <li><%=Time.now.asctime%></li>
 </ul>
 <%# if session[:user_id] %>

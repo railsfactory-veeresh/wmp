@@ -13,6 +13,6 @@ ActiveAdmin.register Product do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+ filter :name
 
 end

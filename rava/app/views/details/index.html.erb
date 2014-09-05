@@ -1,0 +1,31 @@
+<h1>Listing details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name &emsp; |</th>
+      <th>Comment &emsp;| </th>
+      <th>Mobile &emsp;</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <body background="">
+    <% @details.each do |detail| %>
+      <tr>
+        <td><%= detail.name %></td></b>
+        <td><%= detail.comment %></td>
+        <td><%= detail.mobile %></td>
+        <td>&emsp;<%= link_to 'Show', detail %>|</td>
+        <td>&emsp;<%= link_to 'Edit', edit_detail_path(detail) %>|</td>
+        <td>&emsp;<%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detail', new_detail_path %>

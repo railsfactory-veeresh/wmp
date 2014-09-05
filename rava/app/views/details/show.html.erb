@@ -1,0 +1,24 @@
+
+
+	<% if notice%>
+	 redirect "produ"
+	<%= notice %>
+<%end%>
+
+<p>
+  <strong>Name:</strong>
+  <%= @detail.name %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @detail.comment %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @detail.mobile %>
+</p>
+
+<%= link_to 'Edit', edit_detail_path(@detail) %> |
+<%= link_to 'Back', new_detail_path %>

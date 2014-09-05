@@ -1,10 +1,12 @@
 class LineItemsController < ApplicationController
-  before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
+  before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  
   # GET /line_items
   # GET /line_items.json
   def index
-    @line_items = LineItem.all
+    @line_items = LineItem.all.where("status = ?", 0)
   end
 
   # GET /line_items/1
@@ -56,12 +58,20 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1.json
   def destroy
       current_user.line_items.destroy_all
-      
-                    respond_to do |format|
+      respond_to do |format|
       format.html { redirect_to store_url,notice: 'Your cart is currently empty' }
       format.json { head :no_content }
 end
+ end
+
+ def delete1
+    @line_item.destroy 
+     respond_to do |format|
+      format.html { redirect_to line_items_url,notice: 'item removed' }
+      format.json { head :no_content }
   end
+ end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
