@@ -20,13 +20,12 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
+  </div>
   
 
-<% form_for @product, :html => { :multipart => true } do |f| %>
-  
-  <%= f.file_field :photo %>
- 
-<% end %>
+
 
 
   </div>

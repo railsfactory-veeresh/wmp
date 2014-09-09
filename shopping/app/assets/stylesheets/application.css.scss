@@ -14,39 +14,44 @@
  *= require_self
  */
 #banner {
-background: #909090 ;
-padding: 50px;
-border-bottom: 2px solid;
+background: white;
+padding: 80px;
+border-bottom: 4px solid;
 font: small-caps 40px/40px "Times New Roman", serif;
-color: #009999;
+color: black;
+
 text-align: center;
 img {
+ bottom: 30px;
+ left: 320px;
 position: relative;
-width: 80px;
+hight: 400;
+width: 200px;
 float: left;
 
 }
 }
 #notice {
-color: #000 !important;
-border: 2px solid red;
+color: #00FF00 !important;
+border: 2px solid green;
 padding: 1em;
 margin-bottom: 2em;
-background-color: #f0f0f0;
+background-color:#909090;
 font: bold smaller sans-serif;
 }
 #columns {
-background: #009999;
+background-image: url("fr.jpeg");
 #main {
 margin-left: 17em;
 padding: 10em;
-background: 009999;
+background: FF99FF ;
 }
 #side {
+
 float: left;
 padding: 1em 2em;
-width: 13em;
-background: #993399;
+width: 15em;
+background:black;
 form, div {
 display: inline;
 }
@@ -69,7 +74,8 @@ li {
 list-style: none;
 color: red;
 a {
-color: #bfb;
+color: white;
+font-size: 13px;
 font-size: small;
 }
 

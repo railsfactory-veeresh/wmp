@@ -33,8 +33,10 @@ class OrdersController < ApplicationController
       if @order.save
        
         current_user.line_items.update_all(:order_id => @order.id)
+        OrderNotifier.received(@order,current_user).deliver
         current_user.line_items.update_all(:status => true)
-       format.html { redirect_to '/', notice: 'Order was successfully updated.' }
+
+       format.html { redirect_to '/', notice: 'Thank you ..Your order placed.' }
       else
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
