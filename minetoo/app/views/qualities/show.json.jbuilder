@@ -1,0 +1,1 @@
+json.extract! @quality, :id, :conisiderate, :boisterous, :wise, :relaxed, :forward_looking, :intense, :indecisive, :strong, :grounded, :emotional, :demonstrative, :wity, :unaffected, :inscrutable, :mercurial, :user_id, :created_at, :updated_at

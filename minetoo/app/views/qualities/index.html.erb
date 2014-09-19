@@ -1,0 +1,55 @@
+<h1>Listing qualities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conisiderate</th>
+      <th>Boisterous</th>
+      <th>Wise</th>
+      <th>Relaxed</th>
+      <th>Forward looking</th>
+      <th>Intense</th>
+      <th>Indecisive</th>
+      <th>Strong</th>
+      <th>Grounded</th>
+      <th>Emotional</th>
+      <th>Demonstrative</th>
+      <th>Wity</th>
+      <th>Unaffected</th>
+      <th>Inscrutable</th>
+      <th>Mercurial</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qualities.each do |quality| %>
+      <tr>
+        <td><%= quality.conisiderate %></td>
+        <td><%= quality.boisterous %></td>
+        <td><%= quality.wise %></td>
+        <td><%= quality.relaxed %></td>
+        <td><%= quality.forward_looking %></td>
+        <td><%= quality.intense %></td>
+        <td><%= quality.indecisive %></td>
+        <td><%= quality.strong %></td>
+        <td><%= quality.grounded %></td>
+        <td><%= quality.emotional %></td>
+        <td><%= quality.demonstrative %></td>
+        <td><%= quality.wity %></td>
+        <td><%= quality.unaffected %></td>
+        <td><%= quality.inscrutable %></td>
+        <td><%= quality.mercurial %></td>
+        <td><%= quality.user %></td>
+        <td><%= link_to 'Show', quality %></td>
+        <td><%= link_to 'Edit', edit_quality_path(quality) %></td>
+        <td><%= link_to 'Destroy', quality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quality', new_quality_path %>

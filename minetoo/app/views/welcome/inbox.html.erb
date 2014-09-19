@@ -1,0 +1,59 @@
+
+
+<table width="1000" border="0" cellspacing="0" cellpadding="2" align="center" height="40">
+        <tr valign="middle"> 
+
+          <td bgcolor="#4682B4" width="3000" height="100"> 
+            <div align="center"><font color="#FFFFFF"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="6">Name 
+              </font></b></font> </div>
+          </td>
+          <td width="4" height="20"></td>
+          <td bgcolor="#87CEEB" width="3500" height="50"> 
+            <div align="center"><font color="#FFFFFF"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="6">Message
+              </font></b></font></div>
+          </td>
+          <td width="4" height="20"></td>
+          <td bgcolor="#B0E0E6" width="3500" height="50"> 
+            <div align="center"><font color="#FFFFFF"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="6">Reply 
+              </font></b></font> </div>
+          </td>
+        </tr>
+        <% @message.each do |message| %>
+        <tr valign="top"> 
+          <td bgcolor="#4682B4" width="10"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="20">
+              <tr bgcolor="#FFF0F5" valign="top"> 
+                <td> 
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="5">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=message.sender_name%></td>
+                    </font>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="10"></td>
+          <td bgcolor="#87CEEB" width="1800"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="20">
+              <tr bgcolor="#FFF0F5" valign="top"> 
+                <td> 
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=message.message%>
+                  	<td>
+                    </font>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="4"></td>
+          <td bgcolor="#B0E0E6" width="120"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="20">
+              <tr bgcolor="#FFF0F5" valign="top"> 
+                <td> 
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'click here ',new_message_path(to: message.sender_name)%>
+                   </font>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <%end%>
+      </table>
+

@@ -1,0 +1,12 @@
+ <h2>bulletin board for <%=current_user.birth_date.localtime.strftime("%d %B %Y")%></h3>
+ <%= link_to 'Post a new message to the bulletin board', new_bulletin_board_path %>
+</br></br>
+
+
+<% @bulletin_boards.each do |bulletin_board| %>
+    <h4>from:<%= current_user.name %> created at:<%= bulletin_board.created_at.localtime.strftime("%d %B %Y")%></h4>
+        <%= bulletin_board.post %></br>
+<% end %>
+  
+
+

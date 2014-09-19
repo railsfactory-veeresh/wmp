@@ -1,0 +1,9 @@
+<h2><%= current_user.birth_date.localtime.strftime("%d %B %Y")%>
+
+<h4> name :&nbsp; <%=current_user.name %>
+</br><h4>sex :&nbsp;  <%= current_user.sex %>
+</br><h4>born in :&nbsp;  <%= current_user.birth_city %>
+</br><h4>lives   :&nbsp; <%= current_user.present_city %>
+</br><h4>biogarphy :&nbsp; <%= current_user.biography %></br></br></br>
+    
+<%=link_to 'find ppl',mybirthday_display_path%> 

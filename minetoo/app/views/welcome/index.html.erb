@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mine Too App</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+ <%= image_tag("i1.jpeg")%>
+ <%= image_tag("i3.jpeg")%>
+ <%= image_tag("i2.jpeg")%>
+ <%= image_tag("i6.jpeg")%>
+ <%= image_tag("i7.jpeg",size: "200x200")%>
+ 
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        
+        <div class="headline">
+           <div class="container">
+
+                <h1>Who shares your birthday?</h1>
+    
+                 <h2>Are they closer than you think?</h2>
+
+                 <div>
+      <%= label :birth_date ,"your birth date"%>
+        <%= date_select :birth_date,:start_year => 1910%>
+</div>
+<form action="/users/sign_up" >
+<input type="submit" >
+</form> 
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <h2 class="featurette-heading">With Minetoo you will discover people who share your date of birth.
+                <span class="text-muted">perhaps even the hour</span>
+            </h2>
+            <p class="lead">Forget historical figures, politicians, film stars or famous musicians who share your birthday. You'll probably know about those anyway. Many websites have 'famous people born on this day' slots. Minetoo.com is a new site with a completely different take on the "same birthday" phenomenon</p>
+        </div>
+
+      
+       
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

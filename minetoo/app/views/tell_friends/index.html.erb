@@ -1,0 +1,37 @@
+<h1>Listing tell_friends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Friend name</th>
+      <th>Friend email</th>
+      <th>Birth date</th>
+      <th>Message</th>
+      <th>Sender name</th>
+      <th>Sender email</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tell_friends.each do |tell_friend| %>
+      <tr>
+        <td><%= tell_friend.friend_name %></td>
+        <td><%= tell_friend.friend_email %></td>
+        <td><%= tell_friend.birth_date %></td>
+        <td><%= tell_friend.message %></td>
+        <td><%= tell_friend.sender_name %></td>
+        <td><%= tell_friend.sender_email %></td>
+        <td><%= tell_friend.user %></td>
+        <td><%= link_to 'Show', tell_friend %></td>
+        <td><%= link_to 'Edit', edit_tell_friend_path(tell_friend) %></td>
+        <td><%= link_to 'Destroy', tell_friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tell friend', new_tell_friend_path %>

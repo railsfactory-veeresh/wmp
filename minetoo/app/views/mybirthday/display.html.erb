@@ -1,0 +1,11 @@
+<% @user.each do |user| %>
+    <tr>name:<td><%= user.name %></td></br>
+    sex:<td><%= user.sex %></td></br>
+    birth date:<td><%= user.birth_date.localtime.strftime("%d %B %Y") %></td></br>
+    birth city:<td><%= user.birth_city %></td></br>
+    present city:   <td><%= user.present_city %></td></br>
+    presnt country:<td><%= user.present_country %></td></br>
+    biography: <td><%= user.biography %></br></br>
+ 	<%= link_to 'Send message ',new_message_path(to: user.name)%>
+ 	  
+<%end%>

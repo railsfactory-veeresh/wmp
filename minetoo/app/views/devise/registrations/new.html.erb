@@ -1,0 +1,74 @@
+
+
+<h2>Mine too User Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+</br>
+</br> 
+
+<div>
+  <%= f.label :birth_date ,"your birth date"%>
+  <%= f.date_select :birth_date,:start_year => 1910%>
+</div>
+   
+  
+  <div>
+  <%= f.label :name ,"your name"%><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div><%= f.label :email,"your email address" %><br/>
+  <%= f.email_field :email, autofocus: true %></div>
+   <h3>We never reveal your email address to anyone.</h3>
+
+  
+  
+  <div><%= f.radio_button :sex, 'male' %> <%= f.label :sex, "Male" %>        
+<%= f.radio_button :sex, 'female'%> <%= f.label :sex, "Female" %>
+  </div>
+
+
+  
+  <div>
+    <h3>where do you live?</h3>
+  <%= f.label :present_city,"town/city" %><br>
+    <%= f.text_field :present_city%>
+   </div>
+<div>
+  
+  <%= f.label :present_country %><br>
+    <%= f.country_select :present_country %>
+  </div>
+
+
+  <div>
+  <h3>where do you born?</h3>
+  <%= f.label :birth_city,"town/city" %><br>
+    <%= f.text_field :birth_city %>
+  </div>
+
+  <div>
+  <%= f.label :birth_country %><br>
+    <%= f.country_select :birth_country%>
+  </div>
+
+  <div>
+    <%= f.label :biography %><br>
+    <%= f.text_area :biography %>
+  </div>
+
+ 
+  
+
+
+  <div><%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+  <div><%= f.submit "next" %></div>
+<% end %>
+
+

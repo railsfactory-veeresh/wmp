@@ -1,0 +1,46 @@
+<%= form_for(@tell_friend) do |f| %>
+  <% if @tell_friend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tell_friend.errors.count, "error") %> prohibited this tell_friend from being saved:</h2>
+
+      <ul>
+      <% @tell_friend.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :friend_name,"your friends name*" %><br>
+    <%= f.text_field :friend_name %>
+  </div>
+  <div class="field">
+    <%= f.label :friend_email,"your friends email address*" %><br>
+    <%= f.text_field :friend_email %>
+  
+  </div>
+  <div class="field">
+    <%= f.label :birth_date,"date of birth(if known)" %><br>
+    <%= f.datetime_select :birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :message,"drop a message to your freind(optional)"%><br>
+    <%= f.text_area :message %>
+     <p> We include your name and email address in the message</p>
+  </div>
+  <div class="field">
+    <%= f.label :sender_name,"your name*" %><br>
+    <%= f.text_field :sender_name %>
+  </div>
+  <div class="field">
+    <%= f.label :sender_email,"your email address*" %><br>
+    <%= f.text_field :sender_email %>
+
+  </div>
+  
+  
+  <div class="actions">
+    <%= f.submit "send message" %>
+  </div>
+<% end %>

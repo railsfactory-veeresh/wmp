@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bulletin_board.user %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @bulletin_board.post %>
+</p>
+
+<%= link_to 'Edit', edit_bulletin_board_path(@bulletin_board) %> |
+<%= link_to 'Back', bulletin_boards_path %>

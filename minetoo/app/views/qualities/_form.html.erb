@@ -1,0 +1,72 @@
+<%= form_for(@quality) do |f| %>
+  <% if @quality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quality.errors.count, "error") %> prohibited this quality from being saved:</h2>
+
+      <ul>
+      <% @quality.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  &nbsp;&nbsp;
+&nbsp;
+    <%= f.label :conisiderate %>
+    <%= f.check_box :conisiderate %> &nbsp;&nbsp; &nbsp;&nbsp;
+
+    <%= f.label :boisterous %>
+    <%= f.check_box :boisterous %> &nbsp;&nbsp; &nbsp;&nbsp;
+  
+  
+    <%= f.label :wise %>
+    <%= f.check_box :wise %> &nbsp;&nbsp; &nbsp;&nbsp;
+  
+  
+    <%= f.label :relaxed %>
+    <%= f.check_box :relaxed %><br>
+  
+    &nbsp;&nbsp; &nbsp;&nbsp;
+    <%= f.label :forward_looking %>
+    <%= f.check_box :forward_looking %>&nbsp;&nbsp; &nbsp;&nbsp;
+
+  
+    <%= f.label :intense %>
+    <%= f.check_box :intense %>&nbsp;&nbsp; &nbsp;&nbsp;
+
+
+    <%= f.label :indecisive %>
+    <%= f.check_box :indecisive %>&nbsp;&nbsp; &nbsp;&nbsp;
+
+    <%= f.label :strong %>
+    <%= f.check_box :strong %><br>
+   
+   &nbsp;&nbsp; &nbsp;&nbsp;
+    <%= f.label :grounded %>
+    <%= f.check_box :grounded %>&nbsp;&nbsp; &nbsp;&nbsp;
+
+    <%= f.label :emotional %>
+    <%= f.check_box :emotional %>&nbsp;&nbsp; &nbsp;&nbsp;
+  
+    <%= f.label :demonstrative %>
+    <%= f.check_box :demonstrative %>&nbsp;&nbsp; &nbsp;&nbsp;
+   
+   
+    <%= f.label :wity %>
+    <%= f.check_box :wity %><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;
+    <%= f.label :unaffected %>
+    <%= f.check_box :unaffected %>&nbsp;&nbsp; &nbsp;&nbsp;
+
+    <%= f.label :inscrutable %>
+    <%= f.check_box :inscrutable %>&nbsp;&nbsp; &nbsp;&nbsp;
+  
+    <%= f.label :mercurial %>
+    <%= f.check_box :mercurial %></br>
+
+  </br></br></br>
+    
+
+    <%= f.submit "submit" %>
+  </div>
+<% end %>

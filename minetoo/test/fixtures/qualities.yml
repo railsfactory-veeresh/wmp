@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  conisiderate: false
+  boisterous: false
+  wise: false
+  relaxed: false
+  forward_looking: false
+  intense: false
+  indecisive: false
+  strong: false
+  grounded: false
+  emotional: false
+  demonstrative: false
+  wity: false
+  unaffected: false
+  inscrutable: false
+  mercurial: false
+  user_id: 
+
+two:
+  conisiderate: false
+  boisterous: false
+  wise: false
+  relaxed: false
+  forward_looking: false
+  intense: false
+  indecisive: false
+  strong: false
+  grounded: false
+  emotional: false
+  demonstrative: false
+  wity: false
+  unaffected: false
+  inscrutable: false
+  mercurial: false
+  user_id: 

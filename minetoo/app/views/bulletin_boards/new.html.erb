@@ -1,0 +1,4 @@
+<h2>bulletin board for <%=current_user.birth_date.localtime.strftime("%d %B %Y")%></h3>
+<%= render 'form' %>
+
+<%= link_to 'Cancel posting', bulletin_boards_path %>
